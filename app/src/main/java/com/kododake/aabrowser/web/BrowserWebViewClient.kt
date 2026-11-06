@@ -37,7 +37,12 @@ import com.kododake.aabrowser.data.BrowserPreferences
 class BrowserWebViewClient(
     private val callbacks: BrowserCallbacks
 ) : WebViewClient() {
-
+    
+    override fun shouldInterceptRequest(view: WebView, request: WebResourceRequest): WebResourceResponse? {
+        return if (AdBlocker.shouldBlock(request.url?.host)) AdBlocker.emptyResponse()
+        else super.shouldInterceptRequest(view, request)
+    } 
+    
     override fun shouldOverrideUrlLoading(view: WebView, request: WebResourceRequest): Boolean {
         val uri = request.url
         if (CleartextNavigationHandler.handleCleartextIfNeeded(view, uri, callbacks, onPageStart = false)) {
