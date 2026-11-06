@@ -20,8 +20,8 @@ package com.kododake.aabrowser.data.prefs
 import android.net.Uri
 
 object UrlFormatter {
-    const val DEFAULT_URL = "https://www.google.com"
-    private const val SEARCH_TEMPLATE = "https://www.google.com/search?q=%s"
+    const val DEFAULT_URL = "https://search.brave.com"
+    private const val SEARCH_TEMPLATE = "https://search.brave.com/search?q=%s"
 
     fun formatNavigableUrl(raw: String): String {
         val trimmed = raw.trim()
