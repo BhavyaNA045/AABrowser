@@ -33,7 +33,7 @@ object BookmarkPreferences {
     const val GAME_BOOKMARK_URL = "https://kododake.com/game/"
 
     val DEFAULT_BOOKMARK_ENTRIES = listOf(
-        BookmarkEntry("https://www.google.com", "Google"),
+        BookmarkEntry("https://search.brave.com", "Brave Search"),
         BookmarkEntry("https://youtube.com", "YouTube"),
         BookmarkEntry("https://duckduckgo.com", "DuckDuckGo"),
         BookmarkEntry("https://keepandroidopen.org", "Keep Android Open"),
