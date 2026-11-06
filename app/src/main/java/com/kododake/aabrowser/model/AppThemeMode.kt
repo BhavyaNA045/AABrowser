@@ -38,7 +38,7 @@ enum class AppThemeMode(
 
     companion object {
         fun fromKey(key: String?): AppThemeMode {
-            return entries.firstOrNull { it.storageKey == key } ?: AUTO
+            return entries.firstOrNull { it.storageKey == key } ?: DARK
         }
     }
 }
