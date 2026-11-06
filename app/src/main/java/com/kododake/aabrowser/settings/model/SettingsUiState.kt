@@ -23,7 +23,7 @@ import com.kododake.aabrowser.model.QuickActionButtonPosition
 import com.kododake.aabrowser.model.UserAgentProfile
 
 data class SettingsUiState(
-    val themeMode: AppThemeMode = AppThemeMode.AUTO,
+    val themeMode: AppThemeMode = AppThemeMode.DARK,
     val isBetaForceDarkEnabled: Boolean = false,
     val globalScalePercent: Int = 100,
     val homePageUrl: String? = null,
